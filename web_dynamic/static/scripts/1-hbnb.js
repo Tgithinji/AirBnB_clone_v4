@@ -21,7 +21,13 @@ $(document).ready(function () {
     let selectedAmenities = '';
     for (let i = 0; i < amenities.length; i++) {
       selectedAmenities += amenities[i].name;
-      if (i !== amenities.length - 1) { selectedAmenities += ', '; }
+      if (i !== amenities.length - 1) {
+        selectedAmenities += ', ';
+      }
+      if (i == 1) {
+        selectedAmenities += '...';
+        break;
+      }
     }
 
     $('div.amenities h4').text(selectedAmenities);
